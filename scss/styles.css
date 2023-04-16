@@ -288,6 +288,9 @@ p {
   background-color: var(--clr-secondary1);
   margin-bottom: 2rem;
 }
+.checkout-screen .checkout-list {
+  width: 100%;
+}
 .checkout-screen .checkout-item {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   max-width: 30rem;

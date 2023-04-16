@@ -308,6 +308,10 @@ p {
     margin-bottom: 2rem;
   }
 
+  .checkout-list {
+    width: 100%;
+  }
+
   .checkout-item {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 30rem;
