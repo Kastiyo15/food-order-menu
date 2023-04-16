@@ -432,10 +432,12 @@ if (location.href.split("/").slice(-1).toString() == "index.html") {
 
   // Make checkout header clickable
   function makeCheckoutFunctional() {
-    const checkBtn = document.querySelector(".checkout-disabled");
+    if (document.querySelector(".checkout-disabled")) {
+      const checkBtn = document.querySelector(".checkout-disabled");
 
-    checkBtn.setAttribute("href", "./html/checkout.html");
-    checkBtn.classList.remove("checkout-disabled");
+      checkBtn.setAttribute("href", "./html/checkout.html");
+      checkBtn.classList.remove("checkout-disabled");
+    }
   }
 
   /* EVENT LISTENERS */
