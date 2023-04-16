@@ -1,4 +1,8 @@
-if (location.href.split("/").slice(-1).toString() == "index.html") {
+if (
+  location.href.split("/").slice(-1).toString() == "index.html" ||
+  location.href.split("/").slice(-2, -1).toString() ==
+    "maxbedford-food-order-menu.netlify.app"
+) {
   // VARIABLES //
   /* List of food items */
   const list_of_items = [
