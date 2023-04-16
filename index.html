@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Roboto and Open Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Gilroy -->
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/7c7e9aaa57.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Style sheets -->
+    <link rel="stylesheet" href="./scss/dropdown-box.css" />
+    <link rel="stylesheet" href="./scss/menu-items.css" />
+    <link rel="stylesheet" href="./scss/add-to-cart.css" />
+    <link rel="stylesheet" href="./scss/styles.css" />
+    <link rel="stylesheet" href="./scss/media-queries.css" />
+
+    <title>8. Food Menu</title>
+  </head>
+
+  <body>
+    <section class="menu">
+      <!-- Title of the page -->
+      <div class="title">
+        <h1>Our Menu</h1>
+        <div class="underline"></div>
+      </div>
+
+      <!-- List of the buttons for filtering -->
+      <div class="filter-container">
+        <button class="filter" value="1" id="all">
+          <i class="fa-solid fa-utensils fa-xl"></i>
+          <h3>All</h3>
+        </button>
+        <button class="filter" value="0" id="appetisers">
+          <i class="fa-solid fa-shrimp fa-xl"></i>
+          <h3>Appetisers</h3>
+        </button>
+        <button class="filter" value="0" id="mains">
+          <i class="fa-solid fa-burger fa-xl"></i>
+          <h3>Mains</h3>
+        </button>
+        <button class="filter" value="0" id="dessert">
+          <i class="fa-solid fa-ice-cream fa-xl"></i>
+          <h3>Dessert</h3>
+        </button>
+        <button class="filter" value="0" id="drinks">
+          <i class="fa-solid fa-martini-glass-citrus fa-xl"></i>
+          <h3>Drinks</h3>
+        </button>
+        <button class="filter" value="0" id="sale">
+          <i class="fa-solid fa-percent fa-xl"></i>
+          <h3>Sale</h3>
+        </button>
+      </div>
+
+      <!-- List of filters -->
+      <div class="dropdown-container">
+        <!-- Display number of items on display -->
+        <h3 class="item-counter-container">
+          <p>Displaying <span class="item-counter">x</span> items</p>
+        </h3>
+
+        <div class="dropdown-box">
+          <div class="default-text">Sort By</div>
+          <i
+            class="dropdown-icon fa-solid fa-circle-chevron-down"
+            style="color: #ed714d"
+          ></i>
+          <div class="sort-dropdown">
+            <div class="item" data-value="name-desc">Name: A-Z</div>
+            <div class="item" data-value="name-asc">Name: Z-A</div>
+            <div class="item" data-value="price-asc">Price: Low to High</div>
+            <div class="item" data-value="price-desc">Price: High to Low</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- List of available items in a grid, default 1 columns -->
+      <div class="items-container"></div>
+
+      <!-- Load more Button -->
+      <button class="load-more"><h3>Load More...</h3></button>
+
+      <!-- Checkout Button -->
+      <a target="_blank" class="checkout-disabled">
+        <div class="checkout-button-container">
+          <header class="checkout-button">
+            <h3>Checkout</h3>
+            <i class="fa-solid fa-cart-shopping fa-xl">
+              <div class="checkout-cart-counter">1</div>
+            </i>
+          </header>
+        </div>
+      </a>
+
+      <!-- Display cost at the bottom -->
+      <div class="add-to-cart-container">
+        <div class="cart-details-container">
+          <div>
+            <p>Selected</p>
+            <h3 class="selected-item-name"></h3>
+          </div>
+
+          <div class="cart-item-volume-container">
+            <div class="cart-volume-price">
+              <p>Price</p>
+              <h3 class="selected-item-price"></h3>
+            </div>
+            <button class="minus-cart-button">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+            <h3 class="cart-item-counter">0</h3>
+            <button class="plus-cart-button">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+          </div>
+        </div>
+        <button class="add-to-cart-button"><h3>Add To Cart</h3></button>
+      </div>
+    </section>
+
+    <script src="./main.js"></script>
+  </body>
+</html>

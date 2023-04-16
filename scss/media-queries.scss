@@ -1,0 +1,152 @@
+// BIGGEST SCREEN
+@media screen and (min-width: 1700px) {
+  .items-container {
+    grid-template-columns: 30rem 30rem 30rem;
+  }
+  .dropdown-container {
+    max-width: 94rem;
+    justify-content: center;
+  }
+}
+
+// MEDIUM SCREEN
+@media screen and (min-width: 1100px) and (max-width: 1700px) {
+  .items-container {
+    grid-template-columns: 30rem 30rem;
+  }
+
+  .dropdown-container {
+    max-width: 62rem;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .dropdown-box {
+    right: 0;
+  }
+}
+
+// SMALLEST SCREEN
+@media screen and (max-width: 600px) {
+  .menu {
+    margin: 1rem;
+  }
+
+  .items-container {
+    grid-template-columns: 1fr;
+
+    .menu-item {
+      padding: 1rem;
+      flex-direction: row;
+
+      .photo {
+        min-width: 6rem;
+        height: 100%;
+        aspect-ratio: 3/2;
+      }
+
+      .item-info {
+        margin-left: 1rem;
+        padding-top: 1rem;
+
+        header {
+          font-size: 0.9rem;
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          .name {
+            margin-bottom: 0;
+          }
+        }
+
+        .item-text {
+          font-size: 0.9rem;
+          line-height: 1.25rem;
+        }
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .dropdown-container {
+    flex-direction: column;
+    max-width: 30rem;
+    height: 6rem;
+
+    .item-counter-container {
+      position: absolute;
+      top: 3rem;
+      white-space: nowrap;
+    }
+  }
+
+  .filter-container {
+    height: 10rem;
+    overflow-x: scroll;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 90%;
+    margin-bottom: 0;
+    margin-top: -2rem;
+
+    .filter {
+      min-width: 64px;
+      margin-inline: 1rem;
+
+      h3 {
+        bottom: -2.5rem;
+        text-align: center;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .add-to-cart-container {
+    padding: 1rem;
+
+    p {
+      font-size: 0.8rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+
+    .cart-details-container {
+      flex-direction: column;
+
+      &:first-child {
+        text-align: center;
+      }
+
+      .selected-item-name {
+        margin-bottom: 1rem;
+      }
+
+      .cart-item-volume-container {
+        .cart-item-counter {
+          width: 1rem;
+          margin-inline: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .checkout-screen {
+
+    .checkout-list {
+      width: 100%;
+    }
+
+    .checkout-item {
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      h3 {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
