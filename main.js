@@ -1,7 +1,6 @@
 if (
   location.href.split("/").slice(-1).toString() == "index.html" ||
-  location.href.split("/").slice(-2, -1).toString() ==
-    "maxbedford-food-order-menu.netlify.app"
+  location.href.split("/").slice(-1).toString() == ""
 ) {
   // VARIABLES //
   /* List of food items */
