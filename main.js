@@ -435,7 +435,7 @@ if (location.href.split("/").slice(-1).toString() == "index.html") {
     if (document.querySelector(".checkout-disabled")) {
       const checkBtn = document.querySelector(".checkout-disabled");
 
-      checkBtn.setAttribute("href", "./html/checkout.html");
+      checkBtn.setAttribute("href", "./checkout.html");
       checkBtn.classList.remove("checkout-disabled");
     }
   }
